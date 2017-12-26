@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+            </head>
+    <body>
+        <div class="loginBox">
+            <h2>Submit Form</h2>
+            <form>
+                <input type="text" id="input" placeholder="Enter Text">
+                    <button class="myButton" onclick="buttonPressed()">Submit</button>
+                    </form>
+        </div>
+    </body>
+    <script>
+        function buttonPressed() {
+            var input = document.getElementById("input").value
+            window.webkit.messageHandlers.JSListener.postMessage(input)
+        }
+    </script>
+</html>
